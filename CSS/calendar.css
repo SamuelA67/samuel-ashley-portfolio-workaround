@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+  padding: 2em;
+}
+
+h1 {
+  margin-bottom: 0.5em;
+}
+
+#weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  max-width: 600px;
+  margin: auto;
+  font-weight: bold;
+}
+#weekdays div {
+  padding: 0.5em 0;
+}
+
+#calendar-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  gap: 1em;
+  font-weight: bold;
+}
+
+#calendar {
+  display: grid;
+  /* make sure this and the weekdays text columns match */
+  grid-template-columns: repeat(7, 1fr);
+  max-width: 600px;
+  margin: auto;
+  gap: 5px;
+}
+
+.day {
+  padding: 1em;
+  background: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.day:hover {
+  background: #e0f0ff;
+}
+
+.day.completed {
+  background: #a3e635;
+  color: #000;
+  font-weight: bold;
+}
+
+#habit-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+#habitSelect, #newHabit, button {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
